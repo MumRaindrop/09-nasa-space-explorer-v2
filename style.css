@@ -142,3 +142,70 @@ button:hover {
   font-size: 48px;
   margin-bottom: 20px;
 }
+
+/* Random fact section */
+.random-fact {
+  background: #0b3d91; /* NASA-like blue */
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 0 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.random-fact strong { font-size: 16px; }
+.random-fact p { margin: 0; font-size: 14px; color: #e6eefc; }
+
+/* Hover zoom effect for gallery images */
+.gallery-thumb { position: relative; overflow: hidden; border-radius: 6px; }
+.gallery-thumb img { transition: transform 260ms cubic-bezier(.2,.8,.2,1); will-change: transform; }
+.gallery-thumb:hover img { transform: scale(1.06); }
+
+/* Modal styles */
+.modal.hidden { display: none; }
+.modal { position: fixed; inset: 0; z-index: 1200; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.modal-content {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal-media { text-align: center; margin-bottom: 12px; }
+.modal-img { max-width: 100%; height: auto; border-radius: 6px; }
+.modal-iframe { width: 100%; height: 480px; border: none; border-radius: 6px; }
+.modal-date { color: #666; margin-top: 6px; }
+.modal-explanation { margin-top: 12px; line-height: 1.6; color: #333; }
+
+/* Gallery item specific enhancements */
+.gallery-thumb { position: relative; }
+.gallery-thumb img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+.play-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 22px;
+}
+.gallery-info { padding: 10px 6px; }
+.gallery-info h3 { font-size: 16px; color: #111; }
+.gallery-date { font-size: 13px; color: #666; }
